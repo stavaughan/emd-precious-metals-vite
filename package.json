@@ -1,0 +1,41 @@
+{
+  "name": "emd-precious-metals",
+  "version": "1.0.0",
+  "description": "Gold, platinum and silver scrap calculator based on current spot prices with React frontend and NodeJS server",
+  "main": "backend/server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Stephen Vaughan",
+  "engines": {
+    "node": "16.17.0",
+    "npm": "8.15.0"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "cloudinary": "^1.32.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
+    "express-fileupload": "^1.4.0",
+    "express-rate-limit": "^6.6.0",
+    "mongoose": "^6.6.1",
+    "helmet": "^6.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.4.0",
+    "eslint": "^8.23.1",
+    "eslint-plugin-react": "^7.31.8",
+    "nodemon": "^2.0.20"
+  }
+}
