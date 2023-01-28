@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { ImageInputs, ImageCropComponent, useImageCrop } from '.';
+import { ImageInputs, ImageCropComponent } from '.';
 import { CloseButton } from 'src/components/Buttons/Type';
 import { Button } from 'src/components/Buttons';
+import { useImageCrop } from '.';
 
 const ImageCropContainer = ({ crop, setCrop, imgSrc, submitLabel, ...props }) => {
 
@@ -48,7 +49,7 @@ const ImageCropContainer = ({ crop, setCrop, imgSrc, submitLabel, ...props }) =>
 
 	const handleImageDownload = async (e) => {
 		e.preventDefault();
-		props?.setImageID
+		!!props?.setImageID
 			? props.setImageID()
 			: onImageDownload();
 	};

@@ -2,6 +2,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 import mongoose from 'mongoose'
+mongoose.set('strictQuery', false)
 
 const MONGODB_URL = process.env.MONGODB_URL
 

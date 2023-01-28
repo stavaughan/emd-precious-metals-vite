@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import ReactCrop from 'react-image-crop'
 import { useImageMethods } from 'src/components/Gallery/ImageTransformation/components';
 

@@ -17,13 +17,36 @@ const useImageCrop = ({
 	const previewRef = useRef(null)
 	const imageRef = useRef(null)
 
-	const [scale, setScale] = useState(1)
-	const [rotate, setRotate] = useState(0)
-	const [ratioID, setRatioID] = useState('ratio_1_1')
-	const [aspectRatio, setAspectRatio] = useState(1 / 1)
-	const [completedCrop, setCompletedCrop] = useState({})
+	const [imageParams, setImageParams] = useState({
+		scale: 1,
+		rotate: 0,
+		ratioID: 'ratio_1_1',
+		aspectRatio: 1 / 1,
+		imageFormat: 'image/jpeg',
+		completedCrop: {},
+		previewStyle: {
+			border: '1px solid var(--slate-300)',
+			objectFit: 'contain',
+			width: 0,
+			height: 0,
+		},
+		PixelCrop: {
+			x: 0,
+			y: 0,
+			width: 0,
+			height: 0,
+			unit: 'px',
+		},
+		percentCrop: {
+			x: 0,
+			y: 0,
+			width: 0,
+			height: 0,
+			unit: '%',
+		},
+	})
+
 	const [isDownloaded, setIsDownloaded] = useState(false)
-	const [imageFormat, setImageFormat] = useState('image/jpeg')
 
 	const imageFormats = useMemo(() => [
 		{ _id: 'image/jpeg', label: 'JPEG', ext: 'jpg' },
@@ -35,25 +58,51 @@ const useImageCrop = ({
 
 	const resetStates = useCallback(() => {
 		!!setImageUpload && setImageUpload(false)
-		setRatioID('ratio_1_1')
+		setImageParams(prev => ({
+			...prev,
+			scale: 1,
+			rotate: 0,
+			ratioID: 'ratio_1_1',
+			aspectRatio: 1 / 1,
+			completedCrop: {},
+			previewStyle: {
+				border: '1px solid var(--slate-300)',
+				objectFit: 'contain',
+				width: 0,
+				height: 0,
+			},
+			PixelCrop: {
+				x: 0,
+				y: 0,
+				width: 0,
+				height: 0,
+				unit: 'px',
+			},
+			percentCrop: {
+				x: 0,
+				y: 0,
+				width: 0,
+				height: 0,
+				unit: '%',
+			},
+		}))
 		setImgSrc('')
 		previewRef.current = null
 		imageRef.current = null
-		setAspectRatio(1 / 1)
 		setCrop()
-		setCompletedCrop({})
-		setScale(1)
-		setRotate(0)
-	}, [setCrop, setImgSrc, setImageUpload])
+	}, [setCrop, setImgSrc, setImageUpload, setImageParams])
 
 	useEffect(() => {
 		let mounted = true;
 		if (mounted) {
-			const ratioData = aspectRatios({ base: BASE }).find(_ => _._id === ratioID)
-			setAspectRatio(ratioData.value)
+			const ratioData = aspectRatios({ base: BASE }).find(_ => _._id === imageParams.ratioID);
+			setImageParams(prev => ({
+				...prev,
+				aspectRatio: ratioData.value,
+			}))
 		}
 		return () => mounted = false;
-	}, [ratioID, aspectRatios]);
+	}, [imageParams.ratioID, aspectRatios]);
 
 	useEffect(() => {
 		if(isDownloaded) {
@@ -68,40 +117,31 @@ const useImageCrop = ({
 	const onImageDownload = useCallback(() => {
 		generateDownload({
 			canvas: previewRef.current,
-			crop: completedCrop,
+			crop: imageParams.completedCrop,
 			setIsDownloaded,
-			format: imageFormat,
-			ext: imageFormats.find(_ => _._id === imageFormat)?.ext || 'jpeg'
+			format: imageParams.imageFormat,
+			ext: imageFormats.find(_ => _._id === imageParams.imageFormat)?.ext || 'jpeg'
 		})
-	}, [completedCrop, generateDownload, imageFormat, imageFormats])
+	}, [imageParams?.completedCrop, generateDownload, imageParams?.imageFormat, imageFormats])
 
 	const debounceParams = useMemo(() => cropDebounceParams({
-		completedCrop,
+		completedCrop: imageParams.completedCrop,
 		previewRef,
 		imageRef,
-		scale,
-		rotate
-	}), [completedCrop, rotate, scale, cropDebounceParams])
+		scale: imageParams.scale,
+		rotate: imageParams.rotate,
+	}), [imageParams?.completedCrop, imageParams?.rotate, imageParams?.scale, cropDebounceParams])
 
 	useDebounceEffect(debounceParams)
 
 	return {
-		aspectRatio,
 		previewRef,
 		imageRef,
-		ratioID,
-		setRatioID,
-		completedCrop,
-		setCompletedCrop,
-		scale,
-		setScale,
-		rotate,
-		setRotate,
+		imageParams,
+		setImageParams,
 		onImageDownload,
 		resetStates,
-		imageFormat,
 		imageFormats,
-		setImageFormat,
 		BASE
 	}
 }

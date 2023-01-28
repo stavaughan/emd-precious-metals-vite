@@ -47,13 +47,13 @@ const preciousMetals = {
         silver: [
             {
                 _id: 'fine',
-                label: `Fine (.999%)`,
+                label: `Fine (99.9%)`,
 				display: 'Fine',
                 alloy: 1000
             },
             {
                 _id: 'sterling',
-                label: `Sterling (.925%)`,
+                label: `Sterling (92.5%)`,
 				display: 'Sterling',
                 alloy: 925
             }
