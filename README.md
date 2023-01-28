@@ -42,7 +42,7 @@ To convert **`12.3 grams`** to troy ounces, we can use the following formula:
 >
 >*Total Weight of scrap gold (ozt)*
 >
->$$\ Wst = 12.3grams \over 31.1034768$$
+>$$\ Wst = { 12.3grams \over 31.1034768 } $$
 >
 >$$\ Wst = 0.3947ozt$$
 
@@ -65,7 +65,7 @@ Therefore, we can determine the percentage of pure gold in the ring with the fol
 >
 >*ratio of gold in scrap*
 >
->$$\ kr = 14 \over 24$$
+>$$\ kr = { 14 \over 24 } $$
 >
 >$$\ kr = .58333$$
 
