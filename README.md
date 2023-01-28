@@ -44,7 +44,7 @@ To convert **`12.3 grams`** to troy ounces, we can use the following formula:
 >
 >$$\ Wst = { 12.3grams \over 31.1034768 } $$
 >
->$$\ Wst = 0.3947ozt$$
+>$$\ Wst = 0.3955ozt$$
 
 We now have the converted scrap weight in troy ounces. However, we don't have the actual weight of pure gold since `14k` represents a percentage of gold alloyed with other metals, such as nickel or copper.
 
@@ -83,9 +83,9 @@ We can use the following formula to determine the weight of pure gold in the rin
 >
 >*Weight of pure gold in scrap*
 >
->$$\ Wp = 0.585 \times 0.3947$$
+>$$\ Wp = 0.58333 \times 0.3955$$
 >
->$$\ Wp = 0.2308ozt$$
+>$$\ Wp = 0.2307ozt$$
 
 Finally, to calculate the scrap gold price of the ring, we multiply the weight of pure gold by the current market price of gold. Using a fictional market price of `$1,923.34` per troy ounce for gold, we can use the following formula:
 
@@ -103,13 +103,13 @@ Finally, to calculate the scrap gold price of the ring, we multiply the weight o
 >
 >*Net Value of Scrap Gold*
 >
->$$\ Vn = 0.2308ozt \times \$1,923.34$$
+>$$\ Vn = 0.2307ozt \times \$1,923.34$$
 >
->$$\ Vn = \$439.68$$
+>$$\ Vn = \$443.71$$
 
 #### Final Step
 
-Using the math above, we determined that the market value for the scrap gold is `$439.68`. However, to convert your scrap piece into cash, you will need to sell it to a precious metals dealer or jeweler. Keep in mind that a metals dealer's goal is to make a profit, so they will charge a fee or "concession" - often represented as a percentage of the metal's value. To get the best deal, it's important to research and find a buyer who offers a reasonable spread and accurately assesses the quality and weight of your metal. By entering your expected spread, you can estimate what you can expect to receive for your scrap gold before visiting a buyer.
+Using the math above, we determined that the market value for the scrap gold is `$443.71`. However, to convert your scrap piece into cash, you will need to sell it to a precious metals dealer or jeweler. Keep in mind that a metals dealer's goal is to make a profit, so they will charge a fee or "concession" - often represented as a percentage of the metal's value. To get the best deal, it's important to research and find a buyer who offers a reasonable spread and accurately assesses the quality and weight of your metal. By entering your expected spread, you can estimate what you can expect to receive for your scrap gold before visiting a buyer.
 
 ## Screenshots
 
