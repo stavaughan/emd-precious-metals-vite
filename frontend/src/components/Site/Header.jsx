@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import ErrorBoundary from 'src/state/ErrorBoundary';
 import { BrandComponent } from 'src/components/Blocks';
 import { SettingsContext } from 'src/contexts';
 import clsx from 'clsx';
@@ -19,14 +18,12 @@ const Header = ({ settings, isLoading }) => {
 			>
 				<div className="container-fluid">
 					<div className={clsx(isSmall ? 'pb-1' : 'ms-5 pb-2')}>
-						<ErrorBoundary>
-							<BrandComponent
-								baseName={siteBranding?.brand || developer?.name}
-								mark={siteBranding?.mark}
-								isLoading={isLoading}
-								small={isSmall}
-							/>
-						</ErrorBoundary>
+						<BrandComponent
+							baseName={developer?.name}
+							mark={siteBranding?.mark}
+							isLoading={isLoading}
+							small={isSmall}
+						/>
 					</div>
 				</div>
 			</nav>

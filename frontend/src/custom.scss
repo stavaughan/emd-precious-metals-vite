@@ -3,8 +3,6 @@
 /********************************************/
 // @use "sass:meta";
 
-$white: #ffffff;
-
 $indigo-900: #312e81;
 $indigo-800: #3730a3;
 $indigo-700: #4338ca;
@@ -82,27 +80,18 @@ $teal-200: #99f6e4;
 $teal-100: #ccfbf1;
 $teal-50: #f0fdfa;
 
-$red-900: #7f1d1d;
 $red-800: #991b1b;
 $red-700: #b91c1c;
 $red-600: #dc2626;
-$red-500: #ef4444;
-$red-400: #f87171;
-$red-300: #fca5a5;
 $red-200: #fecaca;
 $red-100: #fee2e2;
 $red-50: #fef2f2;
 
-$green-900: #14532d;
-$green-800: #166534;
 $green-700: #15803d;
 $green-600: #16a34a;
 $green-500: #22c55e;
-$green-400: #4ade80;
-$green-300: #86efac;
 $green-200: #bbf7d0;
 $green-100: #dcfce7;
-$green-50: #f0fdf4;
 
 $yellow-900: #713f12;
 $yellow-800: #854d0e;
@@ -265,94 +254,38 @@ $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mon
 	--gray-100: #{$gray-100};
 	--gray-50: #{$gray-50};
 
-	--sky-900: #{$sky-900};
-	--sky-800: #{$sky-800};
 	--sky-700: #{$sky-700};
 	--sky-600: #{$sky-600};
 	--sky-500: #{$sky-500};
 	--sky-400: #{$sky-400};
-	--sky-300: #{$sky-300};
-	--sky-200: #{$sky-200};
 	--sky-100: #{$sky-100};
 	--sky-50: #{$sky-50};
 
-	--teal-900: #{$teal-900};
-	--teal-800: #{$teal-800};
 	--teal-700: #{$teal-700};
-	--teal-600: #{$teal-600};
-	--teal-500: #{$teal-500};
-	--teal-400: #{$teal-400};
-	--teal-300: #{$teal-300};
 	--teal-200: #{$teal-200};
-	--teal-100: #{$teal-100};
-	--teal-50: #{$teal-50};
-
-	--cyan-900: #{$cyan-900};
-	--cyan-800: #{$cyan-800};
-	--cyan-700: #{$cyan-700};
-	--cyan-600: #{$cyan-600};
-	--cyan-500: #{$cyan-500};
-	--cyan-400: #{$cyan-400};
 	--cyan-300: #{$cyan-300};
-	--cyan-200: #{$cyan-200};
-	--cyan-100: #{$cyan-100};
-	--cyan-50: #{$cyan-50};
-
-	--white: #{$white};
-
-	--red-900: #{$red-900};
 	--red-800: #{$red-800};
 	--red-700: #{$red-700};
 	--red-600: #{$red-600};
-	--red-500: #{$red-500};
-	--red-400: #{$red-400};
-	--red-300: #{$red-300};
 	--red-200: #{$red-200};
 	--red-100: #{$red-100};
 	--red-50: #{$red-50};
-
-	--green-900: #{$green-900};
-	--green-800: #{$green-800};
 	--green-700: #{$green-700};
 	--green-600: #{$green-600};
 	--green-500: #{$green-500};
-	--green-400: #{$green-400};
-	--green-300: #{$green-300};
 	--green-200: #{$green-200};
 	--green-100: #{$green-100};
-	--green-50: #{$green-50};
-
-	--yellow-900: #{$yellow-900};
-	--yellow-800: #{$yellow-800};
 	--yellow-700: #{$yellow-700};
-	--yellow-600: #{$yellow-600};
 	--yellow-500: #{$yellow-500};
-	--yellow-400: #{$yellow-400};
-	--yellow-300: #{$yellow-300};
 	--yellow-200: #{$yellow-200};
 	--yellow-100: #{$yellow-100};
-	--yellow-50: #{$yellow-50};
-
 	--orange-500: #{$orange-500};
-	--orange-400: #{$orange-400};
 	--orange-200: #{$orange-200};
-	--orange-100: #{$orange-100};
 	--orange-50: #{$orange-50};
 
-	--purple-500: #{$purple-500};
-	--pink-500: #{$pink-500};
-	--amber-200: #{$amber-200};
-	--amber-100: #{$amber-100};
-	--green-500: #{$green-500};
-	--teal-500: #{$teal-500};
-
-	--primary-lighter-8: #{$primary-lighter-8};
 	--primary-lighter-9: #{$primary-lighter-8};
 	--primary-lighter-10: #{$primary-lighter-10};
-	--primary-lighter-11: #{$primary-lighter-11};
 	--primary-lighter-12: #{$primary-lighter-12};
-	--primary-lighter-14: #{$primary-lighter-14};
-	--primary-lighter-15: #{$primary-lighter-15};
 
 	--brand-color: #{$brand-color};
 	--emd-background-color: #{$emd-background-color};

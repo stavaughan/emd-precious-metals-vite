@@ -86,7 +86,9 @@ const FetchPricesButton = ({ metalsProps, className = '', label = '' }) => {
 				</div>
 			)}
 			<div className="d-flex justify-content-start align-items-center me-4">
-				<label className="me-2 text-xs">Buyer spread</label>
+				<label className="me-2 text-xs">
+					{isXSmall ? 'Concession' : `Dealer's concession`}
+				</label>
 				{!isXSmall && (
 					<InfoAlert
 						message={spreadInfoMessage}

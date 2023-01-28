@@ -1,5 +1,6 @@
 import React from 'react'
 import { Header, Footer } from 'src/components/Site';
+import { PageHeader } from 'src/components/Page';
 
 const Layout = ({ settings, isLoading, children }) => {
 
@@ -11,6 +12,7 @@ const Layout = ({ settings, isLoading, children }) => {
 					isLoading={isLoading}
 				/>
 				<main>
+					<PageHeader />
 					{children}
 				</main>
 			</div>

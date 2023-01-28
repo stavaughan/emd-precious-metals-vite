@@ -2,6 +2,7 @@ import { amountUSD, Global } from "src/globals/js";
 import { preciousMetals } from "src/globals/js/lib";
 import { useSetStorage } from "src/hooks";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Emphasize } from "src/components/Text";
 
 const useMetalsLogic = () => {
 
@@ -206,7 +207,13 @@ const useMetalsLogic = () => {
 		setStoredValues(prev => prev.filter(item => item._id !== id))
 	}, [setStoredValues])
 
-	const spreadInfoMessage = 'The spread is the difference between the market value of your metal and the price you sell it a buyer for. It is typically expressed as a percentage of the market value. The market value represents the price at which the metal is currently being traded.';
+	const Bold = Emphasize.Bold;
+
+	const spreadInfoMessage = (
+		<div>
+			A gold buyer typically charges a fee expressed as a <Bold>percentage</Bold> of the <Bold>market value</Bold> for the precious metal they are buying. This fee is often referred to as the dealer's <Bold>consession</Bold>. While the <Bold>market value</Bold> represents the price at which the metal is currently being traded at.
+		</div>
+	);
 
 	return {
 		metals,
