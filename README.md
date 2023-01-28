@@ -46,10 +46,7 @@ To convert **`12.3 grams`** to troy ounces, we can use the following formula:
 >
 >$$\ Wst = 0.3955ozt$$
 
-We now have the converted scrap weight in troy ounces. However, we don't have the actual weight of pure gold since `14k` represents a percentage of gold alloyed with other metals, such as nickel or copper.
-
-`14k` is a quality indicator often used in gold jewelry where `24k` represents pure gold at `~99.99%` gold.
-Therefore, we can determine the percentage of pure gold in the ring with the following formula:
+We now have the converted scrap weight in troy ounces. However, we don't have the actual weight of pure gold since `14k` represents a percentage of gold alloyed with other metals, such as nickel or copper. `14k` is a quality indicator often used in gold jewelry where `24k` represents pure gold at `~99.99%` gold. Therefore, we can determine the percentage of pure gold in the ring with the following formula:
 
 >***variables***
 >
